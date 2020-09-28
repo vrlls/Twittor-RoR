@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+        <%= stylesheet_link_tag "tweets.css" %>
+        
+    </head>
+<body>
+
+<div class="main">
+    <div class="top-nav">
+        <ul class="ulc">
+            <li class="lic"><a href="/tweets">
+            <div class="icono"><i class="fa fa-arrow-left"></i></div>
+            <div class="text-nav-top"><%= @user.username %></div>
+            </a></li>
+        </ul>
+    </div>
+
+
+  <!--inspiration Taken from https://bbbootstrap.com/snippets/bootstrap-simple-comment-section-74163212  -->
+  <div class="container mt-5">
+    <%= form_for(@tweet, local: true) do |form| %>
+        <div class="d-flex row">
+            <div class="col-md-6">
+                <div class="bg-white comment-section">
+                    <div class="d-flex flex-row user p-2"><img class="rounded-circle" src="https://www.iconfinder.com/data/icons/instagram-ui-twotone/48/Paul-18-512.png" width="50" height="50">
+                        <div class="comment d-flex "><%= form.text_area :content, placeholder: "What's happening?" %></div>
+                    </div>
+                    <div class="d-flex justify-content-between p-3 border-top"><span></span> 
+                        <div class="d-flex align-items-center border-left px-3 comments"><span class="ml-2"><%= form.submit "Tweet", :class => "button-blue" %></span></div>
+                        <% end %>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+  </div>
+</div>
+   
+</body>
+</html> 

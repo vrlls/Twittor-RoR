@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Entrega2</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <p class="notice" ><%= notice %></p>
+  <p class="alert" ><%= alert %></p>
+
+  <% if controller_name == 'tweets' || controller_name == 'users' %>
+    <div class="sidenav">
+      <i class="fa fa-twitter"></i>
+      <a href="/tweets"><div class="icono"><i class="fa fa-home"></i></div> Home </a>
+      <a href="#"><div class="icono"><i class="fa fa-hashtag"></i></div> Explore </a>
+      <a href="#"><div class="icono"><i class="fa fa-bell-o"></i></div>Notifications </a>
+      <a href="#"><div class="icono"><i class="fa fa-envelope-o"></i></div>Messages </a>
+      <a href="#"><div class="icono"><i class="fa fa-bookmark-o"></i></div> Bookmarks</a>
+      <a href="/users"><div class="icono"><i class="fa fa-user-o"></i></div>Profile</a>
+      <%= link_to('Logout', destroy_user_session_path, method: :delete, :class => "logout") %>
+      <button class="button-blue last"><%= link_to 'Tweet', new_tweet_path %></button>
+    </div>
+  <% end %>
+
+    <%= yield %>
+  </body>
+</html>

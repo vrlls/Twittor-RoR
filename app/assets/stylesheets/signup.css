@@ -1,0 +1,86 @@
+body {
+  background-color: #E1E8ED;
+}
+
+.title {
+  margin: auto;
+  width: 20%;
+  border-radius: 25px;
+}
+
+.title h1{
+  font-size: x-large;
+  align-content: center;
+}
+
+.field {
+  padding-top: 2%;
+}
+
+.blue-input {
+  border: none;
+  border-bottom: 2px solid #79808d;
+  background-color: #f4f8fb;
+  color: black;
+  font-size: medium;
+  overflow: auto;
+  width: 70%;
+  outline: 0;
+  padding-top: 1.2%;
+  padding-left: 1%;
+  margin-left: 15%;
+}
+
+input:focus{
+  border-bottom: 2px solid #1DA1F2;
+}
+
+
+.blue-label{
+  color: #1DA1F2;
+  font-family: Helvetica, sans-serif, Arial;
+  font-size: 100%;
+  position: absolute;
+  padding-left: 0.5%;
+  width: 15%;
+  text-align: start;
+  margin-top: 1.2%;
+  margin-left: 6%;
+}
+
+.center {
+  margin: auto;
+  margin-top: 2%;
+  width: 40%;
+  padding: 10px;
+  border-radius: 25px;
+  background-color: white;
+}
+.shadow {
+  -moz-box-shadow:    3px 3px 5px 6px #ccc;
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+  box-shadow:         3px 3px 5px 6px #ccc;
+}
+
+.signup{
+  background-color: #1da1f2;
+  color: white;
+  border: 2px solid #1da1f2;
+  border-radius: 15px;
+  font-size: 100%;
+  font-weight: bold;
+  display: block;
+  outline: 0;
+  margin-top: 2%;
+  width: 80%;
+  margin-left: 10%;
+  padding: 1%;
+}
+
+.links {
+  padding-top: 2%;
+}
+
+.links p {
+  text-align: center;
+}

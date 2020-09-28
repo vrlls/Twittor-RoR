@@ -1,0 +1,232 @@
+body {
+    background-color: #15202b;
+}
+
+.nav-login-top{
+    text-align: center;
+    overflow: inherit;
+    position: absolute;
+    width: 95%;
+    top: 0.5%;
+}
+
+.nav-login-top .in {
+    border: none;
+    border-bottom: 2px solid #44535f;
+    background-color: #192734;
+    color: white;
+    overflow: auto;
+    width: 14%;
+    padding-top: 0.5%;
+    padding-bottom: 0%;
+    font-size: smaller;
+    outline: 0;
+}
+
+.nav-login-top input:focus{
+    padding: 0.5%;
+}
+
+.nav-login-top input::placeholder {
+    color: #192734;
+}
+
+.nav-login-top label{
+    color: #758592;
+    font-family: Helvetica, sans-serif, Arial;
+    font-size: smaller;
+    position: absolute;
+    padding-left: 0.5%;
+    width: 15%;
+    text-align: start;
+}
+
+.nav-login-top a{
+    color: #1da1f2;
+    font-family: Helvetica, sans-serif, Arial;
+    font-size: smaller;
+    position: absolute;
+    top: 100%;
+    margin: 0.5%;
+}
+
+.nav-login-top a:hover{
+    cursor: pointer;
+    color: #008CBA;
+    text-decoration: underline;
+}
+
+
+.center-signup-login .container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 35%;
+    margin-right: 35%;
+    text-align: left;
+    width: 25%;
+    color: white;
+}
+
+.center-signup-login .container h1 {
+    font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-size: 2em;
+}
+
+.center-signup-login .container p {
+    font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0;
+    margin-top: 1%;
+    margin-bottom: 0;
+}
+
+
+.container input{
+    width: 100%;
+    margin: 3px;
+}
+.container a{
+    width: 95%;
+    margin: 3px;
+    text-align: center;
+    text-decoration: none;
+    font: 400 13.3333px Arial;
+    font-weight: 800;
+}
+
+.button-blue{
+    background-color: #1da1f2;
+    color: white;
+    border: 2px solid #1da1f2;
+    border-radius: 15px;
+    padding: 5px;
+    font-weight: bold;
+    outline: 0;
+}
+
+.button-blue:hover {
+    cursor: pointer;
+    background-color: #008CBA;
+    border: 2px solid #008CBA;
+    outline: 0;
+}
+
+
+.button-transparent{
+    background-color: #15202b;
+    color: #1da1f2;
+    border: 1px solid #1da1f2;
+    border-radius: 15px;
+    padding: 5px;
+    font-weight: 800;
+    outline: 0 !important;
+}
+
+.button-transparent:hover{
+    cursor: pointer;
+    background-color: #1c2d3dec;
+    color: #008CBA;
+    border: 1px solid #008CBA;
+}
+
+.fa-twitter:before{
+    font-size: 45px;
+}
+
+.footer-line{
+    text-align: center;
+    overflow: hidden;
+    position: absolute;
+    width: 95%;
+    height: 6%;
+    bottom: 0;
+}
+
+.footer-line a{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #4c5965;
+    padding:0 5px 0 5px;
+    text-decoration: none;
+}
+
+.footer-line a:hover{
+    cursor: pointer;
+    color: #4b5d6e;
+    text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+    .center-signup-login .container{
+        position: absolute;
+        margin-bottom: 5%;
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-top: 30%;
+        width: 60%;
+        height: 80%;
+        margin-bottom: 0;
+    }
+
+    .nav-login-top .in input {
+        width: 30%;
+    }
+
+    .nav-login-top input::placeholder {
+        color: #758592;
+        font-family: Arial;
+        font-size: smaller;
+      }
+    
+    .nav-login-top label{
+        display: none;
+    }
+
+    .nav-login-top a{
+        font-size: 70%;
+    }
+
+    .footer-line a{
+        font-size: 50%;
+        margin-bottom: 0;
+        bottom: 0;
+    }
+    
+  }
+
+  @media (min-width: 768px) and (max-width: 1126px){
+    .nav-login-top input {
+        width: 30%;
+    }
+
+    .nav-login-top label{
+        width: 29%;
+    }
+  }
+
+  @media (min-height: 800px) and (max-height: 1100px) and (max-width: 800px){
+    .center-signup-login .container{
+        position: absolute;
+        margin-bottom: 5%;
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-top: 45%;
+        width: 60%;
+        height: 80%;
+        margin-bottom: 0;
+    }
+  }
+
+  @media (min-height: 1101px){
+    .center-signup-login .container{
+        position: absolute;
+        margin-bottom: 5%;
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-top: 55%;
+        width: 60%;
+        height: 80%;
+        margin-bottom: 0;
+    }
+  }

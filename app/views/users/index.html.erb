@@ -1,0 +1,106 @@
+<header>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <%= stylesheet_link_tag "profile.css" %>
+    <%= stylesheet_link_tag "topnav.css" %>
+    <!------ PROFILE snippet taken from https://bootsnipp.com/snippets/40Kom ---------->
+</header>
+
+<body>
+    <div class="top-nav">
+        <ul class="ulc">
+            <li class="lic"><a href="/tweets">
+            <div class="icono"><i class="fa fa-arrow-left"></i></div>
+            <div class="text-nav-top"><%= @user.username %></div>
+            </a></li>
+        </ul>
+    </div>
+
+    <div class="main">
+    
+
+    <!--Taken from https://bbbootstrap.com/snippets/bootstrap-simple-comment-section-74163212  -->
+    <div class="container">
+        <% current_user.tweets.each do |tweet| %>
+            <div class="d-flex row">
+                <div class="col-md-6">
+                    <div class="bg-white comment-section">
+                        <div class="d-flex flex-row user p-2"><img class="rounded-circle" src="https://www.iconfinder.com/data/icons/instagram-ui-twotone/48/Paul-18-512.png" width="50">
+                            <div class="d-flex flex-column ml-2"><span class="name font-weight-bold"></strong> <%= current_user.name %></span><span><%= tweet.created_at %></span></div>
+                        </div>
+                        <div class="mt-2 p-2">
+                            <p class="comment-content contains"><%= tweet.content %></p>
+                        </div>
+                        <div class="d-flex justify-content-between p-3 border-top"><span><%= link_to 'Editar', edit_tweet_path(tweet) %></span>
+                            <div class="d-flex align-items-center border-left px-3 comments"><span class="ml-2"><%= link_to 'eliminar tweet', tweet, method: 'delete', data: {confirm: "Está seguro que quiere eliminar este tweet?"}  %></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <% end %>
+
+    </div>
+    </div>
+
+
+
+
+    <div class="container">
+    <div class="row">
+    <div class="twPc-div sidenav-right">
+        <a class="twPc-bg twPc-block"></a>
+        <div>
+            <div class="twPc-button">
+                <!-- Twitter Button | you can get from: https://about.twitter.com/tr/resources/buttons#follow -->
+                <a href="https://twitter.com/lauravud" class="twitter-follow-button" data-show-count="false" data-size="large" data-show-screen-name="false" data-dnt="true"></a>
+               
+                <!-- Twitter Button -->   
+            </div>
+
+            <a title="Laura" href="https://twitter.com/lauravud" class="twPc-avatarLink">
+                <img alt="Laura" src="https://www.iconfinder.com/data/icons/instagram-ui-twotone/48/Paul-18-512.png" class="twPc-avatarImg">
+            </a>
+
+            <div class="twPc-divUser bline">
+                <div class="twPc-divName centert">
+                    <a href="https://twitter.com/lauravud"> <%= @user.name %> </a>
+                </div>
+                <span class="centert username">
+                    <a href="https://twitter.com/lauravud">@<span><%= @user.username %></span></a>
+                </span>
+            </div>
+
+            <div class="twPc-divStats">
+                <ul class="twPc-Arrange">
+                    <li class="twPc-ArrangeSizeFit">
+                        <a href="https://twitter.com/lauravud" title="9.840 Tweet">
+                            <span class="twPc-StatLabel twPc-block">Tweets</span>
+                            <span class="twPc-StatValue"><%= current_user.tweets.count %></span>
+                        </a>
+                    </li>
+                    <li class="twPc-ArrangeSizeFit">
+                        <a href="https://twitter.com/lauravud/following" title="885 Following">
+                            <span class="twPc-StatLabel twPc-block">Following</span>
+                            <span class="twPc-StatValue">0</span>
+                        </a>
+                    </li>
+                    <li class="twPc-ArrangeSizeFit">
+                        <a href="https://twitter.com/lauravud/followers" title="1.810 Followers">
+                            <span class="twPc-StatLabel twPc-block">Followers</span>
+                            <span class="twPc-StatValue">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- code end -->
+    </div>
+    </div>
+</body>

@@ -1,0 +1,48 @@
+<header>
+  <%stylesheet_link_tag "signup.css"%>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</header>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+<div class="center shadow">
+
+  <div class="title">
+    <i class="fa fa-twitter"></i> <h1>Sign up</h1>
+  </div>
+
+  <div class="field">
+    <%= f.label :email, :class => "blue-label" %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", :class => "blue-input"  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :name, :class => "blue-label" %><br />
+    <%= f.text_field :name, :class => "blue-input"  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :username, :class => "blue-label" %><br />
+    <%= f.text_field :username, :class => "blue-input"  %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :password, :class => "blue-label" %><br />
+    <%= f.password_field :password, autocomplete: "new-password", :class => "blue-input"  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation, :class => "blue-label" %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", :class => "blue-input"  %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Sign up", :class => "button signup", :onclick => "alert('Al crear la cuenta, recibirás un email de confirmación, da clic al enlace para verificar la cuenta')" %>
+  </div>
+<% end %>
+
+<div class="links">
+  <%= render "devise/shared/links"%>
+</div>
+</div>
