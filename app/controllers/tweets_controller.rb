@@ -33,6 +33,7 @@ class TweetsController < ApplicationController
 
     def edit
         @tweet = Tweet.find(params[:id])
+        @user = current_user
     end
 
     def update
